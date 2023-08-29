@@ -64,7 +64,8 @@ the toJson() method takes a Java object and converts it into a JSON string.
 
 Parsing JSON Data:
 
-Gson can indeed parse JSON data and create a corresponding Java object from it. This process is commonly referred to as deserialization. The method used for deserialization in Gson is fromJson(). 
+Gson can indeed parse JSON data and create a corresponding Java object from it. This process is commonly referred to as deserialization. 
+The method used for deserialization in Gson is fromJson(). 
 It takes a JSON string and a class type, then converts the JSON into a Java object of the specified type.
 
 

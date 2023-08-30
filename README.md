@@ -67,15 +67,30 @@ Parsing JSON Data:
 Gson can indeed parse JSON data and create a corresponding Java object from it. This process is commonly referred to as deserialization. 
 The method used for deserialization in Gson is fromJson(). 
 It takes a JSON string and a class type, then converts the JSON into a Java object of the specified type.
-
-
-in this lab we created class Quotes
- implement function randomRecentQuote to commuincate with URL and read the data and parse the data .
 </pre>
+----------------------------------------------------------------------------------------
+ LAB 8 we created class Quotes
+ implement function randomRecentQuote to commuincate with URL and read the data and parse the data .
 
-output :
+
+output LAB 8:
 ![Capture.PNG](pictures%2FCapture.PNG)
 
 ![outputlab8.PNG](pictures%2Foutputlab8.PNG)
 
 ![TESTCASSES8.PNG](pictures%2FTESTCASSES8.PNG)
+
+-----------------------------------------------------------------------------------------------
+LAB 9 we have
+class Quotes this class has attributes author and content of the  quote and getter methods and to string method 
+class parseQuotesFromFile :to get data from json file and read it .
+class parseQuoteFromURL :implement function randomFavQsAPI to communicate with URL and read the data and parse the data .
+then write on file "recentQuotes.json" the new quote with the original quotes.
+
+when run the App >> we have output from json file  and output from URL
+output LAB 9 :
+![gradlewtest9.PNG](pictures%2Fgradlewtest9.PNG)
+
+![OUTPUTrun9.PNG](pictures%2FOUTPUTrun9.PNG)
+
+![outputTestCases9.PNG](pictures%2FoutputTestCases9.PNG)

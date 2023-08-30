@@ -13,17 +13,22 @@ public class Quotes {
 
     private String author;
     private String text;
+    private String body;
 
     Quotes(String author, String text) {
         this.author = author;
         this.text = text;
     }
 
+    public String getBody() {
+        return body;
+    }
+
     public String getAuthor() {
         return author;
     }
 
-    public String getQuote() {
+    public  String getQuote() {
         return text;
     }
 
@@ -31,7 +36,8 @@ public class Quotes {
 
     @Override
     public String toString() {
-        return "Quote: " + text + "\nAuthor: " + author;
+        String quoteContent = text != null ? text : body;
+        return "Quote: " + quoteContent + "\nAuthor: " + author;
     }
 
 

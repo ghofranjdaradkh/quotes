@@ -6,9 +6,7 @@ package quotes;
 import com.google.gson.Gson;
 import org.junit.jupiter.api.Test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.StringReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -54,4 +52,19 @@ class AppTest {
         assertEquals("Author2", quoteList[1].getAuthor());
         assertEquals("Quote2", quoteList[1].getQuote());
     }
+
+    @Test
+    public void testWriteDataFromBufferedWriter() throws IOException {
+        String data = "Quote data\nAuthor\n";
+
+        // Create a StringWriter to capture the written data
+        StringWriter stringWriter = new StringWriter();
+        BufferedWriter bufferedWriter = new BufferedWriter(stringWriter);
+
+        bufferedWriter.write(data);
+        bufferedWriter.flush();
+        String result = stringWriter.toString();
+        assertEquals("Quote data\nAuthor\n", result);
+    }
+
 }

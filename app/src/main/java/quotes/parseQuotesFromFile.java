@@ -7,25 +7,28 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
 
-public class parseQuote {
-public static Quotes parseRandomQuote(){
+public class parseQuotesFromFile {
+public static Quotes[] parseRandomQuote(){
  try {
         // Reading the data
-        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\CW\\quotes\\app\\src\\main\\resources\\recentQuotes.txt"));
+        BufferedReader reader = new BufferedReader(new FileReader("app\\src\\main\\resources\\recentQuotes.json"));
 
 
         Gson gson = new Gson();
 
         // Parse the JSON data into an array of Quotes
+
         Quotes[] quoteList = gson.fromJson(reader, Quotes[].class);
+
+
 
         // Choose a random quote
         Random random = new Random();
         int randomIndex = random.nextInt(quoteList.length);
-        return quoteList[randomIndex];
+        return new Quotes[]{quoteList[randomIndex]};
     } catch (
     IOException e) {
-        return new Quotes("Error",e.getMessage());
+        return new Quotes[]{new Quotes("Error", e.getMessage())};
     }
 
     }
